@@ -4,10 +4,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   const { password } = await req.json();
-  console.log(password)
   const storedHash = process.env.NEXT_PUBLIC_PASSWORD_HASH || '';
-  console.log("🚀 -> POST -> storedHash:", process.env.NEXT_PUBLIC_PASSWORD_HASH);
-
   
 
   if (!password || !(await bcrypt.compare(password, storedHash))) {
