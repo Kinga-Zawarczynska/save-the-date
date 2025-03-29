@@ -1,5 +1,5 @@
 import bgImg from "../../assets/3.jpg";
-import { WrapperWithBackground } from "../components/navbar/wrapper-with-bg";
+import { WrapperWithBackground } from "../components/wrapper-with-bg";
 
 export default function Contact() {
 

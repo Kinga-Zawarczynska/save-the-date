@@ -1,5 +1,5 @@
 import bgImg from "../../assets/4.jpg";
-import { WrapperWithBackground } from "../components/navbar/wrapper-with-bg";
+import { WrapperWithBackground } from "../components/wrapper-with-bg";
 
 export default function Form() {
 
