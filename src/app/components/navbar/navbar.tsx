@@ -16,11 +16,11 @@ const navLinks = [
   { href: "/church", icon: <PiChurchLight /> },
   { href: "/venue", icon: <GiPartyPopper /> },
   { href: "/form", icon: <CiSquareCheck /> },
-  { href: "/contact", icon: <BsTelephone />, size: "xl" },
+  { href: "/contact", icon: <BsTelephone />, size: "2xl" },
 ];
 
 return (
-  <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white z-50 py-4 px-6">
+    <nav className="fixed top-0 left-0 w-full bg-gradient-to-b from-black via-black/30 to-transparent text-white z-50 py-6 px-6">
     <div className="flex items-center justify-center space-x-8">
       {navLinks.map(({ href, icon, size }) => (
         <Link 
