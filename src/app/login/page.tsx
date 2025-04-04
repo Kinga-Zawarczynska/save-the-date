@@ -1,5 +1,8 @@
 'use client';
 import { useState } from 'react';
+import { WrapperWithBackground } from '../components/wrapper-with-bg';
+
+import bgImg from '../../assets/6.jpg';
 
 export default function Login() {
   const [password, setPassword] = useState('');
@@ -21,8 +24,9 @@ export default function Login() {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Enter Password</h1>
+    <WrapperWithBackground imgSrc={bgImg.src}>
+      <div className='flex flex-col items-center justify-center min-h-screen'>
+      <h1>Wprowadź hasło</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="password"
@@ -35,5 +39,7 @@ export default function Login() {
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
+    </WrapperWithBackground>
+    
   );
 }

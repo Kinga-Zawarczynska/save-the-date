@@ -1,4 +1,5 @@
 import bgImg from "../../assets/2.jpg";
+import MapComponent from "../components/map";
 import { WrapperWithBackground } from "../components/wrapper-with-bg";
 
 export default function Church() {
@@ -7,6 +8,7 @@ export default function Church() {
     <WrapperWithBackground imgSrc={bgImg.src}>
         <h1 className="text-white">KOŚCIÓŁ</h1>
         <p className="text-white">info kościół</p>
+        <MapComponent />  
     </WrapperWithBackground>
   );
 }
