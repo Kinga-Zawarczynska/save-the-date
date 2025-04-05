@@ -1,6 +1,8 @@
 'use client';
+
 import { useState } from 'react';
 import { WrapperWithBackground } from '../components/wrapper-with-bg';
+import { FaArrowRightToBracket } from 'react-icons/fa6';
 
 import bgImg from '../../assets/6.jpg';
 
@@ -17,7 +19,7 @@ export default function Login() {
     });
 
     if (res.ok) {
-      window.location.href = '/'; // Redirect to home page
+      window.location.href = '/';
     } else {
       setError('Incorrect password');
     }
@@ -25,21 +27,23 @@ export default function Login() {
 
   return (
     <WrapperWithBackground imgSrc={bgImg.src}>
-      <div className='flex flex-col items-center justify-center min-h-screen'>
-      <h1>Wprowadź hasło</h1>
-      <form onSubmit={handleSubmit}>
+      <form
+        className="flex flex-col gap-6 items-center justify-center min-h-screen"
+        onSubmit={handleSubmit}
+      >
         <input
+          className="border w-72 border-gray-300 rounded-md placeholder-gray-200 placeholder:font-bold bg-transparent text-white p-2 outline-none"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter password"
+          placeholder="Wprowadź hasło"
           required
         />
-        <button type="submit">Submit</button>
+        <button className="text-xl text-white" type="submit">
+          <FaArrowRightToBracket />
+        </button>
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-    </div>
     </WrapperWithBackground>
-    
   );
 }
