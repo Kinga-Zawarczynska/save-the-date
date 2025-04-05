@@ -39,11 +39,11 @@ export default function Login() {
           placeholder="Wprowadź hasło"
           required
         />
+        {error && <p style={{ color: 'red' }}>{error}</p>}
         <button className="text-xl text-white" type="submit">
           <FaArrowRightToBracket />
         </button>
       </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
     </WrapperWithBackground>
   );
 }
