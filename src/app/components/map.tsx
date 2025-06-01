@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
-const MapComponent = () => {
+const MapComponent = ({lat, lng, iconImg}: {lat: number; lng: number, iconImg: string}) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -15,10 +15,10 @@ const MapComponent = () => {
   if (!isClient) {
     return null; // Don't render the map during SSR
   }
-  const position = [51.505, -0.09] as LatLngExpression;
+  const position = [lat, lng] as LatLngExpression;
 
   const customIcon = new L.Icon({
-    iconUrl: '../../favicon.svg',
+    iconUrl: iconImg,
     iconSize: [32, 32],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
@@ -27,10 +27,10 @@ const MapComponent = () => {
   return (
     <div>
       <MapContainer
-        center={[51.505, -0.09]}
-        zoom={13}
+        center={[lat, lng]}
+        zoom={20}
         scrollWheelZoom={false}
-        style={{ height: '400px', width: '400px' }}
+        style={{ height: '320px', width: '85vw' }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
