@@ -11,7 +11,13 @@ function Details() {
   return (
     <div>
       {openDetails && (
-        <div className="flex flex-col items-center justify-center gap-4 text-center p-6 ">
+        <div
+          className={`transition-all duration-500 ease-in-out transform ${
+            openDetails
+              ? 'opacity-100 scale-100 max-h-[1000px]'
+              : 'opacity-0 scale-95 max-h-0 overflow-hidden'
+          } flex flex-col items-center justify-center gap-4 text-center p-6`}
+        >
           <p>Kochani Goście</p>
           <span>
             z radością zapraszamy na wesele, jednak z uwagi na charakter imprezy
