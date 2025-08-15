@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import { type Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { Navbar } from './components/navbar/navbar';
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: 'Agnieszka&Dawid',
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} grid min-h-screen grid-rows-[auto_1fr_auto] items-center justify-items-center font-[family-name:var(--font-geist-sans)] antialiased lg:text-lg`}
       >
+        <Analytics />
         <Navbar />
         <main className="min-h-screen w-full">{children}</main>
       </body>
