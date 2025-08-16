@@ -1,10 +1,12 @@
 import bgImg from '../../assets/4.jpg';
+import bgImgBlur from '../../assets/4_1.jpg';
 import { WrapperWithBackground } from '../components/wrapper-with-bg';
 
 export default function Form() {
   return (
     <WrapperWithBackground
       imgSrc={bgImg.src}
+      blurDataURL={bgImgBlur.src}
       className="flex flex-col items-center justify-center gap-10 py-30 lg:gap-12 lg:w-120 text-white"
     >
       <h1>Cieszymy się, ze będziecie tego dnia z nami!</h1>

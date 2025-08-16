@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { GiPartyPopper } from 'react-icons/gi';
 import bgImg from '../../assets/5.jpg';
+import bgImgBlur from '../../assets/5_1.jpg';
 import Button from '../components/button';
 import { WrapperWithBackground } from '../components/wrapper-with-bg';
 import CopyButton from '../components/copy-button';
@@ -15,6 +16,7 @@ export default function Venue() {
   return (
     <WrapperWithBackground
       imgSrc={bgImg.src}
+      blurDataURL={bgImgBlur.src}
       className="flex flex-col items-center justify-center gap-10 py-30 lg:gap-12 lg:w-120"
     >
       <span className="flex flex-col gap-2 text-white ">
