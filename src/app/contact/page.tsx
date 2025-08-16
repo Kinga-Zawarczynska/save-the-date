@@ -1,10 +1,12 @@
 import bgImg from '../../assets/3.jpg';
+import bgImgBlur from '../../assets/3_1.jpg';
 import { WrapperWithBackground } from '../components/wrapper-with-bg';
 
 export default function Contact() {
   return (
     <WrapperWithBackground
       imgSrc={bgImg.src}
+      blurDataURL={bgImgBlur.src}
       className="flex flex-col items-center justify-center gap-10 py-30 lg:gap-12 lg:w-120 text-white"
     >
       <h1 className="text-red-300">KONTAKT</h1>

@@ -5,6 +5,7 @@ import { WrapperWithBackground } from '../components/wrapper-with-bg';
 import { FaArrowRightToBracket } from 'react-icons/fa6';
 
 import bgImg from '../../assets/6.jpg';
+import bgImgBlur from '../../assets/6_1.jpg';
 
 export default function Login() {
   const [password, setPassword] = useState('');
@@ -26,7 +27,7 @@ export default function Login() {
   };
 
   return (
-    <WrapperWithBackground imgSrc={bgImg.src}>
+    <WrapperWithBackground imgSrc={bgImg.src} blurDataURL={bgImgBlur.src}>
       <form
         className="flex flex-col gap-6 items-center justify-center min-h-screen"
         onSubmit={handleSubmit}

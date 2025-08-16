@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import bgImg from '../../assets/2.jpg';
+import bgImgBlur from '../../assets/2_1.jpg';
 import { WrapperWithBackground } from '../components/wrapper-with-bg';
 import { IoIosHeartEmpty } from "react-icons/io";
 
@@ -14,7 +15,7 @@ const MapComponent = dynamic(() => import('../components/map'), { ssr: false });
 export default function Church() {
   const [mapOpened, setMapOpened] = useState(false);
   return (
-    <WrapperWithBackground imgSrc={bgImg.src} className="flex flex-col items-center justify-center gap-10 py-30 lg:gap-12 lg:w-120">
+    <WrapperWithBackground imgSrc={bgImg.src} blurDataURL={bgImgBlur.src} className="flex flex-col items-center justify-center gap-10 py-30 lg:gap-12 lg:w-120">
       <span className='flex flex-col gap-2'><i>„Miłość, co daje siłę wszystko znieść, za wszystko też może wystarczyć”.</i>
       <i>– Johann Wolfgang von Goethe</i></span>
       <h1 className="text-white font-bold">Bądźcie z nami w tej najważniejszej chwili <IoIosHeartEmpty className="inline-block text-red-300" /></h1>
